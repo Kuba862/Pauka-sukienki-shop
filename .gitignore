@@ -4,7 +4,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+# GATSBY_SHOPIFY_PASSWORD=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 my token 
+# GATSBY_SHOPIFY_PASSWORD=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 token Tomka Ch.
 # Runtime data
 pids
 *.pid

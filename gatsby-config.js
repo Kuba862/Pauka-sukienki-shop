@@ -1,5 +1,4 @@
 require("dotenv").config()
-
 module.exports = {
   siteMetadata: {
     title: `Shopify Tutorial`,
