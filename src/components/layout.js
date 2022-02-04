@@ -19,11 +19,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header />
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <div>
-        <main>{children}</main>
+        {/* <main>{children}</main> */}
         <Footer>
-          <div>
+          {/* <div>
             © <a href="https://designcode.io/">Design+Code</a>, {new Date().getFullYear()}
           </div>
           <div>
@@ -32,7 +33,7 @@ const Layout = ({ children }) => {
           </div>
           <div>
             <a href="https://github.com/stephdiep/gatsby-shopify-tutorial">Source code</a>
-          </div>
+          </div> */}
         </Footer>
       </div>
     </>
@@ -46,17 +47,7 @@ Layout.propTypes = {
 export default Layout
 
 const Footer = styled.footer`
-    padding: 40px;
-    font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 12px;
-    color: rgba(0,0,0,0.4);
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 40px;
-    width: fit-content;
-
-    a {
-      color: rgba(0,0,0,0.4);
-    }
+    background: #000;
+    width: 100%;
+    height: 150px;
 `
