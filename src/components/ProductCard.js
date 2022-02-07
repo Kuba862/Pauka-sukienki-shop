@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
         <Image src={product.images[0]?.src} />
         <TextWrapper>
           <Title>{product.title}</Title>
-          <Price>{product.priceRangeV2.maxVariantPrice.amount}0$</Price>
+          <Price>{product.priceRangeV2.maxVariantPrice.amount}0zł</Price>
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>

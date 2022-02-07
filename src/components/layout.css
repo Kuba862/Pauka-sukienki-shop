@@ -1,3 +1,46 @@
+@font-face {
+  font-family: 'apropal';
+  src: url('../assets/Apropal-Bold.otf');
+}
+@font-face {
+  font-family: 'lombard';
+  src: url('../assets/Lombard-regular.otf');
+}
+@font-face {
+  font-family: 'made-mirage';
+  src: url('../assets/MADE\ Mirage\ Regular\ PERSONAL\ USE.otf');
+}
+:root {
+  --font180: 180px;
+  --font80: 80px;
+  --font40: 40px;
+  --font32: 32px;
+  --font24: 24px;
+  --font16: 16px;
+  --font12: 12px;
+  --pink1: #A467A5;
+  --pink2: #9D5D9F;
+  --pink3: #DFB0CD;
+  --pink4: #F196A3;
+  --pink5: #F4D9E6;
+  --pink6: #E7A4BF;
+  --pink7: #FAEDF3;
+  --pink8: #A669A6;
+  --PINK9: #A76BA7;
+  --yellow: #F0E5C4;
+  --teal: #008DA1;
+  --blueGrey: #ADB6C7;
+  --chmielewskaBlue: #CDE7ED;
+  --lightViolet: #B5A1C4;
+  --lightGrey: #AEA5A8;
+  --grey: #616161;
+  --darkGrey: #3B3553;
+  --delicateGray: #f5f5f5;
+  --newsUndeline: #232743;
+  --black: #424242;
+  --white: #fff;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

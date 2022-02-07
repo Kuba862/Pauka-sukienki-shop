@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
+      {/* <Header fill={'#CDE7ED'}/> */}
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <div>
         {/* <main>{children}</main> */}
@@ -47,7 +47,5 @@ Layout.propTypes = {
 export default Layout
 
 const Footer = styled.footer`
-    background: #000;
-    width: 100%;
-    height: 150px;
+
 `

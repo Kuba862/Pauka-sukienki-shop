@@ -4,9 +4,15 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import Menu from '../components/menu';
+import Logo from '../components/logo';
+import DressWithPrice from '../components/dressWithPrice';
+
 import HeaderImage from '../images/homePage1.jpeg';
-import PaukaLogo from '../images/svg/paukaLogo.svg';
-import ChmielewskaLogo from '../images/svg/chmielewskaLogo.svg';
+import First from '../images/Placeholder.jpg';
+import Second from '../images/Placeholder2.jpg';
+import Third from '../images/Placeholder3.jpg';
+
 
 // const Header = ({ siteTitle }) => (
 //   <HeaderWrapper>
@@ -24,72 +30,82 @@ import ChmielewskaLogo from '../images/svg/chmielewskaLogo.svg';
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 1440px;
   margin: 0 auto;
   background: url(${HeaderImage}) center center no-repeat;
+  background-position-y: unset;
+  background-position-x: -55px;
   height: 2256px;
 `;
-const LogoWrapper = styled.div`
-  margin: 96px 0 0 160px;
-  position: relative
-`;
-const Pauka = styled.div`
-  background: url(${PaukaLogo}) center center no-repeat;
-  width: 100px;
-  height: 93px;
-  position: absolute;
-  top: 65px;
-  left: 60px;
-`;
-const Chmielewska = styled.div`
-  background: url(${ChmielewskaLogo}) bottom center no-repeat;
-  width: 240px;
-  height: 76px;
-`;
-const MenuWrapper = styled.ul`
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 54px 137px 0 0;
-      a:nth-child(1),
-      a:nth-child(2),
-      a:nth-child(3),
-      a:nth-child(4) {
-        padding-right: 40px;
-      }
-      a:nth-child(4) {
-        margin-right: 100px;
-      }
-      a:nth-child(5) {
-        padding-right: 45px;
-      }
-      a {
-        font-size: 12px;
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-      }
+
+const HeaderText = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  position: relative;
+  bottom: 650px;
+  margin: 0 0 0 160px;
+    a {
+      font-family: 'lombard';
+      font-size: 16px;
+      text-decoration: underline;
+      color: #F0E5C4;
+      line-height: 19.2px;
+    }
 `;
 
+const Title = styled.div`
+margin: 0 0 16px 0;
+  span:nth-child(1),
+  span:nth-child(3) {
+    font-family: 'apropal';
+    color: #CDE7ED;
+    font-size: 80px;
+    line-height: 96px;
+  }
+  span:nth-child(2) {
+    font-family: 'lombard';
+    color: #F0E5C4;
+    font-size: 80px;
+  }
+`;
+const Description = styled.div`
+line-height: 22.4px;
+font-weight: 400;
+margin: 0 0 24px 0;
+  span {
+    width: 568px;
+    font-family: 'made-mirage';
+    color: #f5f5f5;
+    font-size: 16px;
+  }
+`;
 
-const Header = () => {
+const Header = ({fill}) => {
   return (
   <>
   <Wrapper>
-    <LogoWrapper>
-      <Pauka />
-      <Chmielewska />
-    </LogoWrapper>
+    <Logo />
     <div>
-      <MenuWrapper>
-        <Link to="/news">nowości</Link>
-        <Link to="/products" >kolekcje</Link>
-        <Link to="/about">o mnie</Link>
-        <Link to="/shopping">zakupy</Link>
-        <Link to="https://www.instagram.com/sukienki_pauka?utm_medium=copy_link">insta</Link>
-        <Link to="/cart">koszyk</Link>
-      </MenuWrapper>
+      <Menu fill={fill} />
     </div>
+    <HeaderText>
+          <Title>
+            <span>Stworzone </span>
+            <span>do </span>
+            <span>kręcenia</span>
+          </Title>
+        <Description>
+          <span>Piękne i wygodne sukieneczki dla każdej kobiety, które czynią ich codzienność piękniejszą. Dobierz odpowiedni krój i fason. Stylizacja może być zarówno  szykowna lub „na sportowo” i ciesz się komfortem noszenia.</span>
+        </Description>
+        <Link to='/products'>Zobacz najnowszą kolekcję</Link>
+      </HeaderText>
+      <div>
+        <DressWithPrice dressImage={First} width={'240px'} height={'320px'} hiddens name={'Aurora'} description={'szary melanż'} />
+        <DressWithPrice dressImage={Second} width={'320px'} height={'480px'} hiddens name={'Aurora'} description={'Pódrowy róż'} />
+        <DressWithPrice dressImage={Third} width={'420px'} height={'640px'} hiddens name={'Laura'} description={'NiebieskI Jeans'} />
+      </div>
     </Wrapper>
   </>
   )
@@ -99,38 +115,12 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+// Header.defaultProps = {
+//   siteTitle: {
+//     created: `stworzone`,
+//     to: `do`,
+//     spinning: `kręcenia`,
+//   } 
+// }
 
-export default Header
-
-const HeaderWrapper = styled.header`
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-
-  .site-title {
-    font-weight: bold;
-    color: #014c40;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-    font-weight: normal;
-    text-transform: uppercase;
-    font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif;
-
-    :hover {
-      text-decoration: underline;
-    }
-  }
-`
-const LinksWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 40px;
-`
+export default Header;
