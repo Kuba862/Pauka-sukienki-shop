@@ -13,20 +13,6 @@ import First from '../images/Placeholder.jpg';
 import Second from '../images/Placeholder2.jpg';
 import Third from '../images/Placeholder3.jpg';
 
-
-// const Header = ({ siteTitle }) => (
-//   <HeaderWrapper>
-//     {/* <Link to="/" className="site-title">{siteTitle}</Link> */}
-//     <div>
-//     <h1>ZAIMPORTOWANE PRODUKTY ZE STRONY PAUKA.PL</h1>
-//     <p>Jeeli dodasz produkt, zmienisz cenę, itp. na swoim shopify, to będę miał na bieąco aktualizację</p>
-//     </div>
-//     <LinksWrapper>
-//       <Link to="/products">All products</Link>
-//       <Link to="/cart">My Cart</Link>
-//     </LinksWrapper>
-//   </HeaderWrapper>
-// )
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -43,7 +29,6 @@ const HeaderText = styled.div`
   display: flex;
   flex-direction: column;
   width: 540px;
-  position: relative;
   bottom: 650px;
   margin: 0 0 0 160px;
     a {

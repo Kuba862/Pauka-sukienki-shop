@@ -25,22 +25,22 @@ const PriceTag = styled.div`
         span:nth-child(1) {
             font-family: 'lombard';
             font-size: 24px;
-            color: ${(props) => props.fontColor};
+            color: ${(props) => props.fontcolor};
         }
         span:nth-child(2) {
             font-family: 'lombard';
             font-size: 12px;
-            color: ${(props) => props.fontColor};
+            color: ${(props) => props.fontcolor};
         }
 `;
 
-const DressWithPrice = ({name, description, dressImage, width, height, hidden, fontColor}) => {
+const DressWithPrice = ({name, description, dressImage, width, height, hidden, fontcolor}) => {
     return (
         <>
             <Image dressImage={dressImage} width={width} height={height}>
                 <PriceTag hidden={hidden}>
-                    <span fontColor={fontColor}>400</span>
-                    <span fontColor={fontColor}>zł</span>
+                    <span fontcolor={fontcolor}>400</span>
+                    <span fontcolor={fontcolor}>zł</span>
                 </PriceTag>
                 <div>
                     <div>{name}</div>
